@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.14)  21 SEP 2025 00:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.14)  23 SEP 2025 00:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1745,19 +1745,29 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
  [2
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-mathit.enc}] [3
+dvips/lm/lm-mathit.enc}]
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 107.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <8> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 107.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 107.
+ [3
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
-<figs/image.png, id=119, 624.53325pt x 479.391pt>
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-rm.enc}] [4
+
+]
+<figs/image.png, id=150, 624.53325pt x 479.391pt>
 File: figs/image.png Graphic file (type png)
 <use figs/image.png>
-Package pdftex.def Info: figs/image.png  used on input line 124.
+Package pdftex.def Info: figs/image.png  used on input line 130.
 (pdftex.def)             Requested size: 290.9531pt x 223.33145pt.
 
-Overfull \vbox (31.80513pt too high) detected at line 124
+Overfull \vbox (31.80513pt too high) detected at line 130
  []
 
-[4
+[5
 
  <./figs/image.png>]
 \openout4 = `main-slides.vrb'.
@@ -1768,22 +1778,22 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [5
+)) [6
 
 ]
 \openout4 = `main-slides.vrb'.
 
- (./main-slides.vrb) [6
+ (./main-slides.vrb) [7
 
 ]
 \openout4 = `main-slides.vrb'.
 
 
 (./main-slides.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 187
+Overfull \vbox (1.72923pt too high) detected at line 193
  []
 
-[7
+[8
 
 ]
 \openout4 = `main-slides.vrb'.
@@ -1794,10 +1804,10 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
  (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (13.72923pt too high) detected at line 210
+Overfull \vbox (13.72923pt too high) detected at line 216
  []
 
-[8
+[9
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 \tf@nav=\write8
@@ -1818,23 +1828,25 @@ Package rerunfilecheck Info: File `main-slides.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 56739 strings out of 474222
- 1355041 string characters out of 5748733
+ 56753 strings out of 474222
+ 1355245 string characters out of 5748733
  2411294 words of memory out of 5000000
- 77978 multiletter control sequences out of 15000+600000
- 600218 words of font info for 78 fonts, out of 8000000 for 9000
+ 77988 multiletter control sequences out of 15000+600000
+ 608522 words of font info for 81 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1179b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmtt10.pfb>
-Output written on main-slides.pdf (8 pages, 285350 bytes).
+</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/txfonts/txsyb.pfb>
+Output written on main-slides.pdf (9 pages, 311520 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 255 compressed objects within 3 object streams
- 18 named destinations out of 1000 (max. 500000)
+ 357 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 20 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
