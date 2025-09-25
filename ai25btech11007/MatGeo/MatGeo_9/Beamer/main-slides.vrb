@@ -1,0 +1,10 @@
+\frametitle{Python code}
+\begin{lstlisting}
+# Limits and grid
+ax.set_xlim(-6, 6)
+ax.set_ylim(-6, 6)
+ax.grid(True, linestyle="--", alpha=0.6)
+ax.legend()
+plt.show()
+
+    \end{lstlisting}
