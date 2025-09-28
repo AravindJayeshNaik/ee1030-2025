@@ -1,0 +1,232 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+  
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\UseRawInputEncoding
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+
+
+
+\title 
+{MatGeo Assignment 4.13.76}
+
+\author
+{AI25BTECH11007}
+\begin{document}
+
+\frame{\titlepage}
+\begin{frame}{Question}
+    Use elementary column operation $C_2 \to C_2 + 2C_1$ in the following matrix equation
+
+\[
+\begin{pmatrix}
+2 & 1 \\
+2 & 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+3 & 1 \\
+2 & 0
+\end{pmatrix}
+\begin{pmatrix}
+1 & 0 \\
+-1 & 1
+\end{pmatrix}
+\]
+\end{frame}
+
+\begin{frame}{Solution}
+    We have
+\[
+A=\begin{pmatrix}2&1\\2&0\end{pmatrix}
+=
+\begin{pmatrix}3&1\\2&0\end{pmatrix}
+\begin{pmatrix}1&0\\-1&1\end{pmatrix}.
+\]
+
+The column operation $C_2 \to C_2+2C_1$ is represented by the elementary matrix
+\[
+E=\begin{pmatrix}1&2\\0&1\end{pmatrix},
+\]
+since post-multiplication by $E$ performs the same column operation.
+
+Thus, by matrix theory,
+\[
+AE = MNE,
+\]
+where
+\[
+AE=\begin{pmatrix}2&5\\2&4\end{pmatrix}, \qquad
+NE=\begin{pmatrix}1&2\\-1&-1\end{pmatrix}.
+\]
+\end{frame}
+
+\begin{frame}
+Hence,
+\[
+\boxed{\;
+\begin{pmatrix}2&5\\2&4\end{pmatrix}
+=
+\begin{pmatrix}3&1\\2&0\end{pmatrix}
+\begin{pmatrix}1&2\\-1&-1\end{pmatrix}
+\;}.
+\]
+\end{frame}
+
+\begin{frame}[fragile]{C code}
+    \begin{lstlisting}
+        #include <stdio.h>
+
+#define N 2
+
+// Function to multiply two matrices
+void multiply(int A[N][N], int B[N][N], int result[N][N]) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            result[i][j] = 0;
+            for (int k = 0; k < N; k++) {
+                result[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+}
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{C code}
+    \begin{lstlisting}
+        // Function to print matrix
+void printMatrix(int A[N][N]) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            printf("%d ", A[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+int main() {
+    int A[N][N] = {{2, 1}, {2, 0}};
+    int M[N][N] = {{3, 1}, {2, 0}};
+    int Nmat[N][N] = {{1, 0}, {-1, 1}};
+    int E[N][N] = {{1, 2}, {0, 1}};  // elementary matrix
+
+    int AE[N][N], NE[N][N], MNE[N][N];
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{C code}
+    \begin{lstlisting}
+        // Compute AE and NE
+    multiply(A, E, AE);
+    multiply(Nmat, E, NE);
+
+    // Compute M * (NE)
+    multiply(M, NE, MNE);
+
+    printf("AE = \n");
+    printMatrix(AE);
+
+    printf("NE = \n");
+    printMatrix(NE);
+
+    printf("M * NE = \n");
+    printMatrix(MNE);
+
+    return 0;
+}
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Python code}
+    \begin{lstlisting}
+        import numpy as np
+
+# Define matrices
+A = np.array([[2, 1], [2, 0]])
+M = np.array([[3, 1], [2, 0]])
+N = np.array([[1, 0], [-1, 1]])
+
+# Elementary matrix for C2 -> C2 + 2*C1
+E = np.array([[1, 2], [0, 1]])
+
+# Compute AE, NE, and M * NE
+AE = A @ E
+NE = N @ E
+MNE = M @ NE
+
+print("AE =\n", AE)
+print("\nNE =\n", NE)
+print("\nM * NE =\n", MNE)
+    \end{lstlisting}
+\end{frame}
+\end{document}
