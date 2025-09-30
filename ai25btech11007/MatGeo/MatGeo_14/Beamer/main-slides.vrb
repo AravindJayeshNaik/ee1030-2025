@@ -1,0 +1,18 @@
+\frametitle{Python code}
+\begin{lstlisting}
+        # Back substitution
+x = np.zeros(n)
+for i in range(n-1, -1, -1):
+    x[i] = A[i, n] - np.dot(A[i, i+1:n], x[i+1:n])
+
+lambda_val = x[0]
+mu_val = x[1]
+
+print(f"lambda = {lambda_val}")
+print(f"mu = {mu_val}")
+
+# Intersection point
+r = np.array([lambda_val*1, lambda_val*2, lambda_val*(-1)])
+print(f"Intersection Point: {r}")
+print("Shortest Distance = 0 units (lines intersect)")
+    \end{lstlisting}
