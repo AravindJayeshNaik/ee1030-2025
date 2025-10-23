@@ -1,0 +1,24 @@
+import numpy as np
+
+# Define matrices
+A = np.array([[2, 1],
+              [2, 0]])
+
+M = np.array([[3, 1],
+              [2, 0]])
+
+N = np.array([[1, 0],
+              [-1, 1]])
+
+# Elementary matrix for C2 -> C2 + 2*C1
+E = np.array([[1, 2],
+              [0, 1]])
+
+# Compute AE, NE, and M * NE
+AE = A @ E
+NE = N @ E
+MNE = M @ NE
+
+print("AE =\n", AE)
+print("\nNE =\n", NE)
+print("\nM * NE =\n", MNE)

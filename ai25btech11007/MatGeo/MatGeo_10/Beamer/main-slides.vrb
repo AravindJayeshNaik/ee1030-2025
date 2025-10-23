@@ -1,0 +1,10 @@
+\frametitle{Python code}
+\begin{lstlisting}
+       # Test for some sample alpha values
+alpha_values = [-3, -1, 0, 1, 2, 3, 5]
+for a in alpha_values:
+    result = check_coplanarity(a)
+    print(f"alpha = {a:2d} -> Coplanar: {result}")
+
+print("\nConclusion: Lines are coplanar for all real alpha.")
+    \end{lstlisting}

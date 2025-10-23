@@ -1,0 +1,182 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow} 
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=4em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{MatGeo Assignment 5.12.2}
+\author{AI25BTECH11007}
+ \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\noindent
+\textbf{Question :}\\
+Use elementary column operation $C_2 \to C_2 + 2C_1$ in the following matrix equation
+
+\[
+\begin{pmatrix}
+2 & 1 \\
+2 & 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+3 & 1 \\
+2 & 0
+\end{pmatrix}
+\begin{pmatrix}
+1 & 0 \\
+-1 & 1
+\end{pmatrix}
+\]
+
+\noindent\\
+\textbf{Solution :}
+% We are given
+% \[
+% A = \begin{pmatrix}2 & 1\\[2pt]2 & 0\end{pmatrix}, \quad
+% M = \begin{pmatrix}3 & 1\\[2pt]2 & 0\end{pmatrix}, \quad
+% N = \begin{pmatrix}1 & 0\\[2pt]-1 & 1\end{pmatrix},
+% \]
+% so that
+% \[
+% A = M N.
+% \]
+
+% The elementary column operation $C_2 \to C_2 + 2C_1$ is represented by the elementary matrix
+% \[
+% E = \begin{pmatrix}1 & 2\\[2pt]0 & 1\end{pmatrix},
+% \]
+% because post-multiplying any matrix $X$ by $E$ leaves the first column of $X$ unchanged and replaces the second column by 
+% \(\text{col}_2 + 2\,\text{col}_1\).
+
+% Applying this to both sides:
+% \[
+% A E = M N E.
+% \]
+
+% Compute the left-hand side:
+% \[
+% A E =
+% \begin{pmatrix}2 & 1\\[2pt]2 & 0\end{pmatrix}
+% \begin{pmatrix}1 & 2\\[2pt]0 & 1\end{pmatrix}
+% =
+% \begin{pmatrix}2 & 5\\[2pt]2 & 4\end{pmatrix}.
+% \]
+
+% Compute the modified right factor:
+% \[
+% N E =
+% \begin{pmatrix}1 & 0\\[2pt]-1 & 1\end{pmatrix}
+% \begin{pmatrix}1 & 2\\[2pt]0 & 1\end{pmatrix}
+% =
+% \begin{pmatrix}1 & 2\\[2pt]-1 & -1\end{pmatrix}.
+% \]
+
+% Thus,
+% \[
+% M (N E) =
+% \begin{pmatrix}3 & 1\\[2pt]2 & 0\end{pmatrix}
+% \begin{pmatrix}1 & 2\\[2pt]-1 & -1\end{pmatrix}
+% =
+% \begin{pmatrix}2 & 5\\[2pt]2 & 4\end{pmatrix}.
+% \]
+
+% Hence the transformed matrix equation is
+% \[
+% \boxed{\;
+% \begin{pmatrix}2 & 5\\[2pt]2 & 4\end{pmatrix}
+% =
+% \begin{pmatrix}3 & 1\\[2pt]2 & 0\end{pmatrix}
+% \begin{pmatrix}1 & 2\\[2pt]-1 & -1\end{pmatrix}
+% \;}.
+% \]
+
+
+We have
+\[
+A=\begin{pmatrix}2&1\\2&0\end{pmatrix}
+=
+\begin{pmatrix}3&1\\2&0\end{pmatrix}
+\begin{pmatrix}1&0\\-1&1\end{pmatrix}.
+\]
+
+The column operation $C_2 \to C_2+2C_1$ is represented by the elementary matrix
+\[
+E=\begin{pmatrix}1&2\\0&1\end{pmatrix},
+\]
+since post-multiplication by $E$ performs the same column operation.
+
+Thus, by matrix theory,
+\[
+AE = MNE,
+\]
+where
+\[
+AE=\begin{pmatrix}2&5\\2&4\end{pmatrix}, \qquad
+NE=\begin{pmatrix}1&2\\-1&-1\end{pmatrix}.
+\]
+
+Hence,
+\[
+\boxed{\;
+\begin{pmatrix}2&5\\2&4\end{pmatrix}
+=
+\begin{pmatrix}3&1\\2&0\end{pmatrix}
+\begin{pmatrix}1&2\\-1&-1\end{pmatrix}
+\;}.
+\]
+
+\end{document}

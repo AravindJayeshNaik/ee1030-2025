@@ -1,0 +1,19 @@
+\frametitle{C code}
+\begin{lstlisting}
+        # Plot directrix: x - 2y + 3 = 0  →  y = (x + 3)/2
+x_dir = np.linspace(-8, 6, 200)
+y_dir = (x_dir + 3) / 2
+plt.plot(x_dir, y_dir, 'g--', label='Directrix')
+
+# Focus point (-1, 2)
+plt.plot(-1, 2, 'ro', label='Focus (-1, 2)')
+
+# Graph settings
+plt.axis('equal')
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.title('Parabola with Focus (-1, 2) and Directrix x - 2y + 3 = 0')
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.legend()
+plt.show()
+    \end{lstlisting}
